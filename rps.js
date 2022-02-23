@@ -108,14 +108,14 @@ function game() {
         
     }
     if (playerCount > pcCount) {
-        alert("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw)
+        alert("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
         return console.log("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
 
     } else if (playerCount < pcCount) {
-        alert("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw)
+        alert("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
         return console.log("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
     } else {
-        alert("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount)
+        alert("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
         return console.log("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
     }
 }
