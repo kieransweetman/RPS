@@ -33,7 +33,8 @@ function playerSelection(choice) {
         default:
             alert("not a valid choice");
             return console.log("not a valid choice"); 
-
+            // BUG - Here if the user plays a game, and misstypes on R3, it returns nan 
+            // which lets pc win every time. 
     }   
 
 }
