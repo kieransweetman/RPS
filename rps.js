@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 // computers choice
 function computerPlay() {
     var pcMove = Math.floor((Math.random()*3)+1);
@@ -90,35 +96,35 @@ function winner(choice, computerMove) {
 }
 
     
-function game() {
-    var playerCount = 0;
-    var pcCount = 0;
-    var draw = 0
+// function game() {
+//     var playerCount = 0;
+//     var pcCount = 0;
+//     var draw = 0
 
-    for (let i = 0; i < 5; i++) {
-        let result = playRound();
-        if (result == 1) {
-            playerCount++;
-        } else if (result == 0) {
-            pcCount++;
-        } else {
-            draw++;
-        }
+//     for (let i = 0; i < 5; i++) {
+//         let result = playRound();
+//         if (result == 1) {
+//             playerCount++;
+//         } else if (result == 0) {
+//             pcCount++;
+//         } else {
+//             draw++;
+//         }
         
         
-    }
-    if (playerCount > pcCount) {
-        console.log("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
-        return alert("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
+//     }
+//     if (playerCount > pcCount) {
+//         console.log("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
+//         return alert("You Won! --- Player Score: " + playerCount + " | " + "Pc Score: " + pcCount + " | " + "Draws: " + draw);
         
 
-    } else if (playerCount < pcCount) {
-        console.log("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
-        return alert("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
+//     } else if (playerCount < pcCount) {
+//         console.log("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
+//         return alert("You Lost... --- Pc Score: " + pcCount  + " | " + "Player Score: " + playerCount + " | " + "Draws: " + draw);
         
-    } else {
-        console.log("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
-        return alert("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
+//     } else {
+//         console.log("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
+//         return alert("It's a draw... --- Draws: " + draw + " | " + "Player Score: " + playerCount + " | " + "Pc Score: " + pcCount);
         
-    }
-}
+//     }
+// }
