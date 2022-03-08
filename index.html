@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script  src="rps.js"></script>
-    <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="rps.js" defer></script>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-        }
-        button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        </style>   
+    <title>RPS</title>
 </head>
-<style></style>
-<body >
-    <button id = "btn" type="btn"value='click' onclick="game()">Click me</button> 
-    <div id="demo"></div>
+<body>
+    <div id="body">
+        
+        <div id="content">
+            <section>
+                <p class="text">Rock, Paper, Scissors</p>
+            </section>
+            <section>
+                <input class='choice' type="image" src="photos/rock.jpg">
+                <input class='choice' type="image" src="photos/paper.jpg">
+                <input class='choice' type="image" src="photos/scissors.jpg">
+            </section>
+        </div>
+    </div>    
 </body>
 </html>
