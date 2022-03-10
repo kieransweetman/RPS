@@ -1,11 +1,18 @@
 * {
     background-color: maroon;
     font-family: 'Ubuntu' sans-serif;
+    margin:0;
+    padding: 0;
 }
 #body {
-    height: 40vw;
+    
     display: flex;
     justify-content: center;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    
+    
     
 }
 #content{
@@ -14,14 +21,56 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    cursor:url('http://s13.postimg.org/nziz57hab/cursor.png'), auto;
 }
 .text {
 
     font-size: 75px;
     
 }
+#playChoice {
+    display: flex;
+    
+    gap: 50px;
+}
 .choice {
     justify-content: center;
-    height: 15vw;
-    width: 7vw;
+    border: 2.5px solid #bf8422 ;
+    height: 7.5vw;
+    width: 7.5vw;
+    
+    
+    
+}
+.choice:active {
+    
+    border: 3.5px solid #361b28;
+    box-shadow: 2px 2px 5px #361b28, -2px -2px 5px #361b28 ;
+}
+
+.choice:hover{
+    /* box-shadow: 2px 2px 5px#b6ccd7 ; */
+    box-shadow: .5px .5px 2px #b6ccd7, -1px -1px 2px #b6ccd7;
+}
+
+
+#floatingText {
+    position: absolute;
+    border-style: solid;
+    border-color: black;
+    top: 0;
+    left: 0;
+} 
+
+input[name="Scissors"] {
+    cursor: url('photos/scissors.png'), pointer;
+}
+input[name="Rock"] {
+    cursor: url('photos/stones.png'), pointer;
+}
+input[name="Paper"] {
+    cursor: url('photos/send.png'), pointer;
 }

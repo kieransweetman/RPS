@@ -132,31 +132,29 @@ const div = document.createElement('div');
 const p = document.createElement('p');
 
 choices.forEach(input => input.addEventListener('click', () => {
+
+
+
+    
+
     let user_choice = (input.getAttribute("name"));
     let winner = playRound(user_choice);
-    scoreCount(winner);
+    
+
+    
+    lb[0].textContent = winner;
+    
+    
+
+    
+    
+
+
     
 }))
 
+
+const lb = document.querySelectorAll(".results");
+
+
 // to think about
-function scoreCount(roundWinner) {
-       
-
-    let playerScore = 0;
-    let pcScore = 0;
-    let draw = 0;
-
-    if (playerScore != 5 || pcScore != 5 ) {
-        console.log(playerScore);
-        if (roundWinner == 2) {
-            draw += 1
-        } else if (roundWinner == 1){
-            playerScore += 1
-        } else {
-            pcScore += 1
-        }
-    }
-        
-
-    
-};
