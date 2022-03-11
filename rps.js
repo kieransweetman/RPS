@@ -128,33 +128,82 @@ function winner(choice, computerMove) {
 
 const choices = document.querySelectorAll(".choice");
 const content = document.querySelector("#content");
+const rpsCards = document.querySelector("#playChoice");
+const titleText = document.querySelector('#titleText');
 const div = document.createElement('div');
 const p = document.createElement('p');
+const lb = document.querySelectorAll(".results");
+const start = document.querySelector('.text')
+
+let playerCount = 0;
+let pcScore = 0;
+let draw = 0;
+
+start.addEventListener('click', () => {
+    titleText.style.display = "none";
+
+    
+
+})
+
+
 
 choices.forEach(input => input.addEventListener('click', () => {
 
+    let result = rpsChoice(input);
+    lb[0].textContent = playerCount.toString() + " : player score";
+    lb[2].textContent = pcScore.toString() + " : pc score";
+    lb[1].textContent = draw.toString() + " : draw";
+   
+    
+    if (result == 1) {
+        playerCount++;
 
+    } else if (result == 0){
+        pcScore++;
 
-    
+    } else {
+        draw++;
 
-    let user_choice = (input.getAttribute("name"));
-    let winner = playRound(user_choice);
-    
+    }
 
-    
-    lb[0].textContent = winner;
-    
-    
+    if (playerCount == 4) {
+        console.log('it worked');
+        rpsCards.style.display = "none";
+        lb.forEach(item => {
+            
+            if (item.getAttribute('name') == 'results') {
+                console.log('pass')
+            } else {
+                item.textContent = '';
+            }
+        })
+        lb[3].textContent = " You Won !";
+        
+        
+    } else if (pcScore == 4) {
+        rpsCards.style.display = "none";
+        lb.forEach(item => {
+            if (item.getAttribute('name') == 'results') {
+                console.log('pass')
+            } else {
+                item.textContent = '';
+            }
+        })
+        lb[3].textContent = " You Lost ...";
+        
+    }
 
-    
-    
-
-
-    
 }))
 
 
-const lb = document.querySelectorAll(".results");
 
+
+function rpsChoice(choice) {
+    let user_choice = (choice.getAttribute("name"));
+    let winner = playRound(user_choice);
+    console.log("result: " + winner) ;
+    return winner;
+}
 
 // to think about
