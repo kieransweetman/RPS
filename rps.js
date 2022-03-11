@@ -134,6 +134,18 @@ const div = document.createElement('div');
 const p = document.createElement('p');
 const lb = document.querySelectorAll(".results");
 const start = document.querySelector('.text')
+const scoreBoard = document.querySelector('#scoreBoard');
+
+
+const playAgain = document.createElement('input');
+playAgain.setAttribute('type', 'button');   
+playAgain.setAttribute('id', 'playAgain');
+playAgain.setAttribute('name', 'playAgainBtn');
+playAgain.setAttribute('value', 'Play Again?');
+playAgain.style.cssText = "padding: 5px 5px; font-weight: bold; border: 2px solid #b6ccd7; border-radius: 12px;"
+
+
+
 
 let playerCount = 0;
 let pcScore = 0;
@@ -141,8 +153,19 @@ let draw = 0;
 
 start.addEventListener('click', () => {
     titleText.style.display = "none";
+})
 
-    
+playAgain.addEventListener('click', () => {
+    playerCount = 0;
+    pcScore = 0;
+    draw = 0;
+
+    scoreBoard.lastElementChild.remove();
+    titleText.style.display = "flex";
+    rpsCards.style.display = 'flex';
+    lb.forEach(pclass => {
+        pclass.textContent = "";
+    });
 
 })
 
@@ -167,7 +190,11 @@ choices.forEach(input => input.addEventListener('click', () => {
 
     }
 
-    if (playerCount == 4) {
+    lb[0].textContent = playerCount.toString() + " : player score";
+    lb[2].textContent = pcScore.toString() + " : pc score";
+    lb[1].textContent = draw.toString() + " : draw";
+
+    if (playerCount == 5) {
         console.log('it worked');
         rpsCards.style.display = "none";
         lb.forEach(item => {
@@ -179,9 +206,10 @@ choices.forEach(input => input.addEventListener('click', () => {
             }
         })
         lb[3].textContent = " You Won !";
+        scoreBoard.appendChild(playAgain);
         
         
-    } else if (pcScore == 4) {
+    } else if (pcScore == 5) {
         rpsCards.style.display = "none";
         lb.forEach(item => {
             if (item.getAttribute('name') == 'results') {
@@ -191,8 +219,12 @@ choices.forEach(input => input.addEventListener('click', () => {
             }
         })
         lb[3].textContent = " You Lost ...";
+        scoreBoard.appendChild(playAgain);
         
     }
+    
+
+    
 
 }))
 
@@ -207,3 +239,5 @@ function rpsChoice(choice) {
 }
 
 // to think about
+
+

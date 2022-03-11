@@ -29,28 +29,37 @@
 }
 #titleText {
     /* border: 2px solid black; */
-    height: 200px;
+    height: 250px;
     width: 700px;
     position: absolute;
 
     text-align: center;
     display: flex;
     justify-content: center;
+    
+    
+    
 }
 input.text {
     
     flex: 1 0 auto;
     font-size: 75px;
+    background-color: maroon;
     border: 3px solid #232b2b;
     border-radius: 6px;
+    transition: all 1s ease-in-out;
     
 }
-input.text:hover {
-    border: 0px;
+#titleText:hover .text {
+    border: 2px solid black;
     background-color: #9db0b0;
-    
+    height: 250px;
+    width: 700px;
+    transform: scale(2);
+    cursor: url('photos/metrize.png'), pointer;
     
 }
+
 #playChoice {
     display: flex;
     padding: 10px 10px;
@@ -58,16 +67,16 @@ input.text:hover {
     background-color: #232b2b;
     box-shadow: 1px 1px 3px #9db0b0, -1px -1px 3px #9db0b0;
     
-}
-.choice {
-    justify-content: center;
     
+}
+input.choice {
+    justify-content: center;
+    background-color: maroon;
     border: 2.5px solid #bf8422 ;
     height: 7.5vw;
     width: 7.5vw;
-    
-    
-    
+    transition: all .3s ease-out;
+
 }
 .choice:active {
     
@@ -78,17 +87,28 @@ input.text:hover {
 .choice:hover{
     /* box-shadow: 2px 2px 5px#b6ccd7 ; */
     box-shadow: .5px .5px 2px #b6ccd7, -1px -1px 2px #b6ccd7;
+    background-color: gold;
+    
 }
 
 
-#floatingText {
-    position: absolute;
-    border-style: solid;
-    border-color: black;
-    top: 0;
-    left: 0;
+#scoreBoard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
 } 
-
+.results{
+    transition: background-color .3s ease-in-out;
+}
+input[name="playAgainBtn"]:hover {
+    border: 2px solid black;
+    background-color: #b6ccd7;
+    cursor: url('photos/metrize.png'), pointer;
+}
 input[name="Scissors"] {
     cursor: url('photos/scissors.png'), pointer;
 }
