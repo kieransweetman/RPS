@@ -9,7 +9,7 @@ Learning elements:
   - importing Fonts
   - Game logic, helper functions
 
-# Overview and difficulties
+# Overview
 
 In this project, I first created the game logic for RPS before moving on to the the Front-end. I manipulated the DOM by selecting their nodes and applying effects + game logic to each element that the user interacted with. To add more interaction, I used CSS animations to give my buttons and the game as a whole a more interactive experience (using rock, paper, and scissor icons for the cursor for on hover effects). 
 
