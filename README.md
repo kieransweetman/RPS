@@ -3,6 +3,7 @@
 # putting into practice JS (DOM), HTML and CSS into one 
 
 Learning elements:
+
   - Plan, Prototyping, improve strategy plan
   - The Fundamentals of HTML, CSS, JS, including the DOM
         - Most Notably, event listeners for JS and seleting inputs by name in CSS
